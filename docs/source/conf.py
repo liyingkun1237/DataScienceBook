@@ -51,7 +51,7 @@ source_suffix = ['.rst', '.md']
 # source_suffix = '.md'
 
 # The master toctree document.
-master_doc = 'README'
+master_doc = 'index'
 
 # General information about the project.
 project = 'DataScienceBook'
