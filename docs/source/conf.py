@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # DataScienceBook documentation build configuration file, created by
-# sphinx-quickstart on Mon Apr  9 17:56:43 2018.
+# sphinx-quickstart on Mon Apr  9 19:32:55 2018.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -17,9 +17,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, r'C:\Users\liyin\Desktop\DataScienceBook')
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- General configuration ------------------------------------------------
@@ -47,11 +47,11 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-# source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.md'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'README'
 
 # General information about the project.
 project = 'DataScienceBook'
@@ -72,7 +72,7 @@ release = 'latest'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'zh'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -188,11 +188,9 @@ epub_exclude_files = ['search.html']
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
-#test md
+## lyk add
 from recommonmark.parser import CommonMarkParser
 
 source_parsers = {
     '.md': CommonMarkParser,
 }
-
-source_suffix = ['.rst', '.md']
