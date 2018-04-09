@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # DataScienceBook documentation build configuration file, created by
-# sphinx-quickstart on Mon Apr  9 19:32:55 2018.
+# sphinx-quickstart on Mon Apr  9 19:55:48 2018.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -47,8 +47,16 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
+# source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
+
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
 source_suffix = ['.rst', '.md']
-# source_suffix = '.md'
 
 # The master toctree document.
 master_doc = 'index'
@@ -187,10 +195,3 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
-
-## lyk add
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
